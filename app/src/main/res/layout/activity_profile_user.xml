@@ -58,6 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/toolbarRL"
         android:layout_margin="5dp"
+        app:tabSelectedTextColor="@color/pink02"
         android:background="@android:color/transparent"
         app:tabBackground="@drawable/tab_selector"
         app:tabIndicatorFullWidth="false"

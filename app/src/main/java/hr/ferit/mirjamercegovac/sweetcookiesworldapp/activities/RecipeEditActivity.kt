@@ -10,6 +10,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import hr.ferit.mirjamercegovac.sweetcookiesworldapp.R
 import hr.ferit.mirjamercegovac.sweetcookiesworldapp.databinding.ActivityRecipeEditBinding
 import java.util.*
 
@@ -36,6 +37,7 @@ class RecipeEditActivity : AppCompatActivity() {
         setContentView(binding.root)
         //get recipe id to edit info
         recipeId = intent.getStringExtra("recipeId")!!
+        window.statusBarColor = resources.getColor(R.color.pink02, theme)
 
         progressDialog = ProgressDialog(this)
         progressDialog.setTitle("Molimo pričekajte")

@@ -49,7 +49,8 @@
                 android:id="@+id/emailTil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:hintEnabled="false">
+                app:hintEnabled="false"
+                app:boxStrokeColor="@color/pink02">
 
                 <EditText
                     android:id="@+id/emailEt"
@@ -75,6 +76,7 @@
                 android:layout_below="@+id/emailTil"
                 android:layout_marginTop="5dp"
                 app:hintEnabled="false"
+                app:boxStrokeColor="@color/pink02"
                 app:passwordToggleEnabled="true">
 
                 <EditText

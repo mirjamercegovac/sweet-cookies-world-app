@@ -19,6 +19,7 @@ import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
+import hr.ferit.mirjamercegovac.sweetcookiesworldapp.R
 import hr.ferit.mirjamercegovac.sweetcookiesworldapp.databinding.ActivityCategoryAddBinding
 import hr.ferit.mirjamercegovac.sweetcookiesworldapp.databinding.ActivityRegisterBinding
 import java.util.*
@@ -41,7 +42,7 @@ class CategoryAddActivity : AppCompatActivity() {
 
         //init firebase auth
         firebaseAuth = FirebaseAuth.getInstance()
-
+        window.statusBarColor = resources.getColor(R.color.pink02, theme)
         //configure progress dialog
         progressDialog = ProgressDialog(this)
         progressDialog.setTitle("Molimo pričekajte")

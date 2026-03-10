@@ -39,8 +39,15 @@ class RecipeDetailActivity : AppCompatActivity() {
         binding = ActivityRecipeDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        recipeId = intent.getStringExtra("recipeId")!!
+        recipeId = intent.getStringExtra("recipeId") ?: ""
 
+        if (recipeId.isEmpty()) {
+            Toast.makeText(this, "Greška: Recept nije pronađen", Toast.LENGTH_SHORT).show()
+            finish()
+            return
+        }
+
+        window.statusBarColor = resources.getColor(R.color.pink02, theme)
         //init firebase auth
         firebaseAuth = FirebaseAuth.getInstance()
         if (firebaseAuth.currentUser != null){

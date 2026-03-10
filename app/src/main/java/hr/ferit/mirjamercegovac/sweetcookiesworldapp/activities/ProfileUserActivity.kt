@@ -14,6 +14,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import hr.ferit.mirjamercegovac.sweetcookiesworldapp.R
 import hr.ferit.mirjamercegovac.sweetcookiesworldapp.fragments.RecipesUserFragment
 import hr.ferit.mirjamercegovac.sweetcookiesworldapp.databinding.ActivityProfileUserBinding
 import hr.ferit.mirjamercegovac.sweetcookiesworldapp.models.ModelCategory
@@ -36,7 +37,7 @@ class ProfileUserActivity : AppCompatActivity() {
 
         firebaseAuth = FirebaseAuth.getInstance()
         checkUser()
-
+        window.statusBarColor = resources.getColor(R.color.pink02, theme)
         setupWithViewPagerAdapter(binding.viewPager)
         binding.tabLayout.setupWithViewPager(binding.viewPager)
 

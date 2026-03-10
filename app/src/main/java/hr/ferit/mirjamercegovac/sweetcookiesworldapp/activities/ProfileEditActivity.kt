@@ -46,7 +46,7 @@ class ProfileEditActivity : AppCompatActivity() {
         progressDialog = ProgressDialog(this)
         progressDialog.setTitle("Molimo pričekajte")
         progressDialog.setCanceledOnTouchOutside(false)
-
+        window.statusBarColor = resources.getColor(R.color.pink02, theme)
         firebaseAuth = FirebaseAuth.getInstance()
         loadUserInfo()
 

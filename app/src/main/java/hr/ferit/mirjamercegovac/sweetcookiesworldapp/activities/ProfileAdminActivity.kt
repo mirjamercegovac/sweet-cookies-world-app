@@ -38,7 +38,7 @@ class ProfileAdminActivity : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
         checkUser()
         loadCategories()
-
+        window.statusBarColor = resources.getColor(R.color.pink02, theme)
         //search
         binding.searchEt.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, p1: Int, p2: Int, p3: Int){

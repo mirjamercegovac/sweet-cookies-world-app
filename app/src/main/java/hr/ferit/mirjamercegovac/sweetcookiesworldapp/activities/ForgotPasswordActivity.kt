@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Patterns
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import hr.ferit.mirjamercegovac.sweetcookiesworldapp.R
 import hr.ferit.mirjamercegovac.sweetcookiesworldapp.databinding.ActivityForgotPasswordBinding
 
 class ForgotPasswordActivity : AppCompatActivity() {
@@ -34,7 +35,7 @@ class ForgotPasswordActivity : AppCompatActivity() {
         binding.submitBtn.setOnClickListener {
             validateData()
         }
-
+        window.statusBarColor = resources.getColor(R.color.pink02, theme)
 
     }
 

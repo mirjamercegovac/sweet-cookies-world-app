@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.provider.SyncStateContract
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -12,6 +13,7 @@ import com.google.firebase.database.ValueEventListener
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import hr.ferit.mirjamercegovac.sweetcookiesworldapp.Constants
+import hr.ferit.mirjamercegovac.sweetcookiesworldapp.R
 import hr.ferit.mirjamercegovac.sweetcookiesworldapp.databinding.ActivityRecipeViewBinding
 
 class RecipeViewActivity : AppCompatActivity() {
@@ -31,9 +33,16 @@ class RecipeViewActivity : AppCompatActivity() {
         binding = ActivityRecipeViewBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        recipeId = intent.getStringExtra("recipeId")!!
-        loadRecipeDetails()
+        recipeId = intent.getStringExtra("recipeId") ?: ""
 
+        if (recipeId.isEmpty()) {
+            Toast.makeText(this, "Greška: Recept nije pronađen", Toast.LENGTH_SHORT).show()
+            finish()
+            return
+        }
+
+        loadRecipeDetails()
+        window.statusBarColor = resources.getColor(R.color.pink02, theme)
         binding.backBtn.setOnClickListener {
             onBackPressed()
         }

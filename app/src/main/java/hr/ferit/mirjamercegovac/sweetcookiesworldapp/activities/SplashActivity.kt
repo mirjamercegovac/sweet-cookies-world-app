@@ -21,7 +21,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         firebaseAuth = FirebaseAuth.getInstance()
-
+        window.statusBarColor = resources.getColor(R.color.pink02, theme)
         Handler().postDelayed(Runnable {
             checkUser()
         }, 1000) //1 sekunde
@@ -33,7 +33,7 @@ class SplashActivity : AppCompatActivity() {
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         }else{
-            val ref = FirebaseDatabase.getInstance().getReference("Users")
+            val ref = FirebaseDatabase.getInstance("https://sweet-cookies-world-app-default-rtdb.europe-west1.firebasedatabase.app").getReference("Users")
             ref.child(firebaseUser.uid)
                 .addListenerForSingleValueEvent(object : ValueEventListener {
 

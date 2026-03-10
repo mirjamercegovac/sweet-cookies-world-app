@@ -35,7 +35,7 @@ class ProfileActivity : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
         loadUserInfo()
         loadFavoriteRecipes()
-
+        window.statusBarColor = resources.getColor(R.color.pink02, theme)
         binding.backBtn.setOnClickListener {
             onBackPressed()
         }

@@ -11,6 +11,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import hr.ferit.mirjamercegovac.sweetcookiesworldapp.R
 import hr.ferit.mirjamercegovac.sweetcookiesworldapp.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
@@ -33,7 +34,7 @@ class LoginActivity : AppCompatActivity() {
         progressDialog = ProgressDialog(this)
         progressDialog.setTitle("Molimo pričekajte")
         progressDialog.setCanceledOnTouchOutside(false)
-
+        window.statusBarColor = resources.getColor(R.color.pink02, theme)
         //handle click, not have account - go to register
         binding.noAccountTv.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))

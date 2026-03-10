@@ -46,9 +46,9 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="225dp"
-        android:layout_marginEnd="40dp">
+        android:layout_marginEnd="30dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -59,7 +59,8 @@
                 android:id="@+id/nameTil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:hintEnabled="false">
+                app:hintEnabled="false"
+                app:boxStrokeColor="@color/pink02">
 
                 <EditText
                     android:id="@+id/nameEt"
@@ -84,7 +85,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/nameTil"
                 android:layout_marginTop="5dp"
-                app:hintEnabled="false">
+                app:hintEnabled="false"
+                app:boxStrokeColor="@color/pink02">
 
                 <EditText
                     android:id="@+id/emailEt"
@@ -110,6 +112,7 @@
                 android:layout_below="@+id/emailTil"
                 android:layout_marginTop="5dp"
                 app:hintEnabled="false"
+                app:boxStrokeColor="@color/pink02"
                 app:passwordToggleEnabled="true">
 
                 <EditText
@@ -136,6 +139,7 @@
                 android:layout_below="@+id/passwordTil"
                 android:layout_marginTop="5dp"
                 app:hintEnabled="false"
+                app:boxStrokeColor="@color/pink02"
                 app:passwordToggleEnabled="true">
 
                 <EditText

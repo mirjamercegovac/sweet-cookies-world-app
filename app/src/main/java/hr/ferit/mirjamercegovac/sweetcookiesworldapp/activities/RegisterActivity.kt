@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
+import hr.ferit.mirjamercegovac.sweetcookiesworldapp.R
 import hr.ferit.mirjamercegovac.sweetcookiesworldapp.activities.ProfileUserActivity
 import hr.ferit.mirjamercegovac.sweetcookiesworldapp.databinding.ActivityRegisterBinding
 import java.util.*
@@ -34,7 +35,7 @@ class RegisterActivity : AppCompatActivity() {
         progressDialog = ProgressDialog(this)
         progressDialog.setTitle("Molimo pričekajte")
         progressDialog.setCanceledOnTouchOutside(false)
-
+        window.statusBarColor = resources.getColor(R.color.pink02, theme)
         //handle back button click
         binding.backBtn.setOnClickListener{
             onBackPressed() //back on previous screen

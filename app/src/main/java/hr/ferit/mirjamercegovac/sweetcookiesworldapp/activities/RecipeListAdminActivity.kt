@@ -9,6 +9,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import hr.ferit.mirjamercegovac.sweetcookiesworldapp.R
 import hr.ferit.mirjamercegovac.sweetcookiesworldapp.adapters.AdapterRecipeAdmin
 import hr.ferit.mirjamercegovac.sweetcookiesworldapp.databinding.ActivityRecipeListAdminBinding
 import hr.ferit.mirjamercegovac.sweetcookiesworldapp.models.ModelRecipe
@@ -33,7 +34,7 @@ class RecipeListAdminActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRecipeListAdminBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        window.statusBarColor = resources.getColor(R.color.pink02, theme)
         //get from intent, that we passed from adapter
         val intent = intent
         categoryId = intent.getStringExtra("categoryId")!!

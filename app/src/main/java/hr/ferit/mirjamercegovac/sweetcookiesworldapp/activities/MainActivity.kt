@@ -18,6 +18,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        window.statusBarColor = resources.getColor(R.color.pink02, theme)
+
         //click login
         binding.loginBtn.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
