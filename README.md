@@ -1,5 +1,4 @@
 # Sweet Cookies World App 
-# Sweet cookies world app
 Android aplikacija koja omogućuje pregled recepata za kolače i slastice, izrađena u Android Studiju koristeći Kotlin. Korisnicima omogućuje pretraživanje i spremanje recepata koji su organizirani u kategorije i dostupni u PDF formatu unutar aplikacije, dok administratori imaju potpunu kontrolu nad sadržajem aplikacije.
 
 ## Korisničke uloge
